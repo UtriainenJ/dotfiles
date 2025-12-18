@@ -16,6 +16,3 @@ PS1='[\u@\h \W]\$ '
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.ghcup/bin:$PATH"
-export PATH="$HOME/.cabal/bin:$PATH"
-
