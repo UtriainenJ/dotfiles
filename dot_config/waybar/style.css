@@ -1,0 +1,215 @@
+@import "colors.css";
+
+* {
+    font-family: "Hurmit Nerd Font", "Font Awesome 7 Brands", "Font Awesome 7 Free";
+    font-size: 15px;
+    border: none;
+    font-weight: 600;
+}
+
+window#waybar {
+  background: transparent;
+  color: @cursor;
+}
+
+.modules-left {
+  border-radius: 0.6rem;
+  background: @background;
+  padding: 6px 0 6px 0;
+  /*margin: 0 6px;*/
+}
+
+.modules-right {
+  border-radius: 0.6rem;
+  background: @background;
+  padding: 4px 0 4px 0;
+  /*margin: 0 6px;*/
+}
+
+.modules-center {
+  border-radius: 0.6rem;
+  background: @background;
+  padding: 0;
+  /*margin: 0 6px;*/
+}
+
+#workspaces {
+  border-radius: 1rem;
+  margin: 3px;
+  /*background-color: @color1;*/
+}
+
+#workspaces button {
+  color: @color3;
+  border-radius: 1rem;
+  padding: 0.4rem;
+  font-family: "Font Awesome 7 Free";
+}
+
+#workspaces button.active {
+  color: @color14;
+  border-radius: 1rem;
+  font-family: "Font Awesome 7 Free";
+}
+
+#workspaces button.special {
+  color: @color13
+}
+
+#workspaces button:hover {
+  color: @color7;
+  border-radius: 1rem;
+  font-family: "Font Awesome 7 Free";
+}
+
+#workspaces button label {
+  font-family: "Font Awesome 7 Free";
+  font-size: 16px;
+}
+
+#clock {
+  color: @color12;
+  border-radius: 0 1rem;
+  padding: 0.2rem 0.25rem;
+  background-color: @color1; 
+}
+
+#battery {
+    font-family: "Font Awesome 7 Free";
+}
+
+#battery.critical {
+    color: red;
+}
+
+#battery.warning {
+    color: orange;
+}
+
+#battery.good {
+    color: olive;
+}
+
+#battery.full {
+    color: green;
+}
+
+#battery.charging, #battery.plugged {
+    color: lightblue;
+}
+
+@keyframes blink {
+    from {
+        color: #000000;
+    }
+    to {
+        color: red;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+#cpu {
+    background-color: #2ecc71;
+    color: #000000;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+#memory {
+    background-color: #9b59b6;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: #000000;
+}
+
+#disk {
+    background-color: #964B00;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: #000000
+}
+
+#pulseaudio {
+    background-color: @color1;
+    color: @color12;
+    padding: 0.rem 0;
+    font-size: 12;
+    border-radius: 0.3rem;
+}
+
+#pulseaudio:hover {
+    background-color: @color14;
+}
+
+#pulseaudio.muted {
+    background-color: @color8;
+    color: @background;
+}
+
+#temperature {
+    background-color: #f0932b;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: #000000
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
+
+#tray {
+    padding-bottom: 6px;
+    padding-top: 2px;
+    background-color: @color9;
+    border-radius: 0.6rem 0.6rem 0 0;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    color: @foreground;
+}
+
+#privacy-item.screenshare {
+    background-color: @color8;
+}
+
+#privacy-item.audio-in {
+    background-color: @color14;
+}
+
+#privacy-item.audio-out {
+    background-color: @color12;
+}
+
+
+#custom-power {
+    font-family: "Font Awesome 7 Free";
+    color: @color13;
+}
+
+#custom-hider {
+    font-family: "Font Awesome 7 Free";
+    color: @color13;
+}
