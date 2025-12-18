@@ -1,0 +1,4 @@
+# portable environment variables
+
+# swww wallpaper transition
+export SWWW_TRANSITION=random
