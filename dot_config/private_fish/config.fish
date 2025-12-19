@@ -15,9 +15,10 @@ if status is-interactive
 
 end
 
-############################
-# PATH additions (prepend) #
-############################
+#############################
+# PATH additions (prepend -p)
+#############################
+fish_add_path -p $HOME/.local/bin
 
 # ASDF configuration code
 if test -z $ASDF_DATA_DIR
@@ -32,3 +33,5 @@ if not contains $_asdf_shims $PATH
     set -gx --prepend PATH $_asdf_shims
 end
 set --erase _asdf_shims
+##########################
+
