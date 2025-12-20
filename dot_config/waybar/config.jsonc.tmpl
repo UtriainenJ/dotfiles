@@ -33,7 +33,7 @@
 	"rotate": 90,
 	"orientation": "inherit",
 	"modules": [
-		"battery",
+		{{ if .hasBattery }}"battery",{{ end }},
 		"cpu", 
 		"temperature",
 		"memory"
@@ -121,6 +121,7 @@
 	"format-icons": ["", "", "", "", ""]
     },
 
+{{ if .hasBatter }}
     "battery": {
 	"full-at": 80,
 	"on-click": "uwsm app -- tlpui",
@@ -140,7 +141,7 @@
 	"tooltip": true,
 	"tooltip-format": "{capacity}%\n{time}\nHealth: {health}%"
     },
-
+{{ end }}
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": " {icon}\n{volume}%",
@@ -168,8 +169,8 @@
 	"format-ok": "✓",
 	"system": true, // Monitor failed systemwide units.
 	"user": true, // Ignore failed user units.
-	"on-click": "kitty --hold systemctl --user --failed",
-	"on-click-release": "kitty --hold systemctl --failed"
+	"on-click": "ghostty --hold systemctl --user --failed",
+	"on-click-release": "ghostty --hold systemctl --failed"
     },
 
     "custom/power": {
@@ -178,8 +179,8 @@
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
 		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
+			"shutdown": "systemctl shutdown",
+			"reboot": "systemctl reboot",
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}

@@ -74,6 +74,7 @@ window#waybar {
   background-color: @color1; 
 }
 
+{{ if .hasBattery }}
 #battery {
     font-family: "Font Awesome 7 Free";
 }
@@ -115,7 +116,7 @@ window#waybar {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-
+{{ end }}
 
 #cpu {
     background-color: #2ecc71;
