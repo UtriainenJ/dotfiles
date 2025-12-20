@@ -33,7 +33,7 @@
 	"rotate": 90,
 	"orientation": "inherit",
 	"modules": [
-		{{ if .hasBattery }}"battery",{{ end }},
+		{{ if .hasBattery }}"battery",{{ end }}
 		"cpu", 
 		"temperature",
 		"memory"
@@ -121,7 +121,7 @@
 	"format-icons": ["", "", "", "", ""]
     },
 
-{{ if .hasBatter }}
+{{ if .hasBattery }}
     "battery": {
 	"full-at": 80,
 	"on-click": "uwsm app -- tlpui",
