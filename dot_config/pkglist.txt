@@ -26,7 +26,6 @@ hypridle
 hyprlock
 hyprpicker
 hyprpolkitagent
-hyprsunset
 wallust
 imagemagick
 libnotify
