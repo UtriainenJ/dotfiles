@@ -1,0 +1,11 @@
+bluetooth.service
+firewalld.service
+greetd.service
+grub-btrfsd.service
+NetworkManager.service
+fstrim.timer
+paccache.timer
+snapper-cleanup.timer
+snapper-timeline.timer
+pacman-filesdb-refresh.timer
+man-db.timer
