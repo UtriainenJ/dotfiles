@@ -62,6 +62,9 @@ mouse-scroll-multiplier = 1.0
 #window decoration
 #window-decoration = server
 
+# keep open in bg = faster at the cost of some memory
+quit-after-last-window-closed = false
+
 #keybinds
 keybind = ctrl+comma=open_config
 keybind = ctrl+shift+v=paste_from_clipboard
