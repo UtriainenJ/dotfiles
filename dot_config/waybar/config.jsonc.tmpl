@@ -1,4 +1,7 @@
 // -*- mode: jsonc -*-
+{{- $chassis := "desktop" }}
+{{- $chassis = (output "hostnamectl" "--json=short" | mustFromJson).Chassis }}
+
 {
     "font": "Hurmit Nerd Font:size=13",
     "layer": "top", // Waybar at top layer
@@ -33,7 +36,7 @@
 	"rotate": 90,
 	"orientation": "inherit",
 	"modules": [
-		{{ if .hasBattery }}"battery",{{ end }}
+		{{ if or (eq $chassis "laptop") (eq $chassis "convertible") }}"battery",{{ end }}
 		"cpu", 
 		"temperature",
 		"memory"
@@ -121,10 +124,10 @@
 	"format-icons": ["", "", "", "", ""]
     },
 
-{{ if .hasBattery }}
+{{- if or (eq $chassis "laptop") (eq $chassis "convertible") }}
     "battery": {
 	"full-at": 80,
-	"on-click": "uwsm app -- tlpui",
+	"on-click": "uwsm-app -- tlpui",
         "states": {
 	    "full": 70,
             "good": 50,
@@ -142,6 +145,7 @@
 	"tooltip-format": "{capacity}%\n{time}\nHealth: {health}%"
     },
 {{ end }}
+
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": " {icon}\n{volume}%",
@@ -160,7 +164,7 @@
             "default": ["", "", ""],
 	    "tooltip-format": "Speaker: {volume}%\nMic: {source_volume}%"
         },
-        "on-click": "uwsm app -- pavucontrol"
+        "on-click": "uwsm-app -- pavucontrol"
     },
 
     "systemd-failed-units": {
