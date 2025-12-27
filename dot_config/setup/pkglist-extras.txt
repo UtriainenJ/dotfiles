@@ -1,6 +1,5 @@
 btrfs-assistant
 snapper
-grub-btrfs
 bluez-utils
 arch-audit
 arch-update
@@ -28,7 +27,6 @@ python
 python-pip
 rebuild-detector
 snapper
-snapper-rollback
 vesktop-bin
 visual-studio-code-bin
 speech-dispatcher

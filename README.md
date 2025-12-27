@@ -7,7 +7,7 @@ These dotfiles have been created, tested, and used using Arch linux. I do not gu
 
 To install packages listed in `.config/pkglist.txt` (includes requirements for the dots):
 1. Install an AUR helper (paru/yay/etc.)
-2. run: `paru -S --needed - < ~/.config/pkglist.txt`
+2. run: `paru -S --needed - < ~/.config/setup/pkglist.txt`
 * Optionally install additional packages with
   `paru -S --needed - < ~/.config/pkglist-extras.txt`
   Note that the extras aren't required for the dotfiles. They're a bunch of nice-to-have packages for a near-full Arch-based setup.

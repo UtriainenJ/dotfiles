@@ -1,5 +1,4 @@
-base
-base-devel
+asdf-vm
 bat
 dunst
 cliphist
@@ -10,6 +9,7 @@ fcitx5-configtool
 fcitx5-gtk
 fcitx5-qt
 fd
+ffmpeg
 firefox
 fish
 fisher
@@ -20,7 +20,6 @@ chezmoi
 git
 greetd
 greetd-regreet
-grub
 hyprland
 hypridle
 hyprlock
@@ -33,9 +32,13 @@ man-db
 man-pages
 neovim
 otf-hermit-nerd
+otf-font-awesome
+poppler
 qt5-wayland
 qt5ct
 qt6ct
+resvg
+ripgrep
 waybar
 yazi
 xdg-desktop-portal-hyprland
@@ -45,4 +48,5 @@ pipewire
 wireplumber
 pipewire-pulse
 pavucontrol
-asdf-vm
+zoxide
+7z
