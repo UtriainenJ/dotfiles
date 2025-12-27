@@ -1,4 +1,6 @@
 @import "colors.css";
+{{- $chassis := "desktop" }}
+{{- $chassis = (output "hostnamectl" "--json=short" | mustFromJson).Chassis }}
 
 * {
     font-family: "Hurmit Nerd Font", "Font Awesome 7 Brands", "Font Awesome 7 Free";
@@ -74,7 +76,7 @@ window#waybar {
   background-color: @color1; 
 }
 
-{{ if .hasBattery }}
+{{- if or (eq $chassis "laptop") (eq $chassis "convertible") }}
 #battery {
     font-family: "Font Awesome 7 Free";
 }
