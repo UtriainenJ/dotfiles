@@ -1,5 +1,3 @@
-base
-base-devel
 bat
 dunst
 cliphist
@@ -20,7 +18,6 @@ chezmoi
 git
 greetd
 greetd-regreet
-grub
 hyprland
 hypridle
 hyprlock
@@ -33,6 +30,7 @@ man-db
 man-pages
 neovim
 otf-hermit-nerd
+otf-font-awesome
 qt5-wayland
 qt5ct
 qt6ct
