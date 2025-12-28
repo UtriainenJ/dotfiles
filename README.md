@@ -5,9 +5,9 @@ Dotfiles managed with chezmoi.
 **Disclaimer** These dots are mainly meant for my personal setups and learning. Your mileage may vary, use at your own risk.
 These dotfiles have been created, tested, and used using Arch linux. I do not guarantee other distros will work.
 
-To install packages listed in `.config/pkglist.txt` (includes requirements for the dots):
+To install packages listed in `.config/setup/pkglist.txt` (includes requirements for the dots):
 1. Install an AUR helper (paru/yay/etc.)
-2. run: `paru -S --needed - < ~/.config/setup/pkglist.txt`
+2. run: `paru -S --needed $(cat ~/.config/setup/pkglist.txt)`
 * Optionally install additional packages with
   `paru -S --needed - < ~/.config/pkglist-extras.txt`
   Note that the extras aren't required for the dotfiles. They're a bunch of nice-to-have packages for a near-full Arch-based setup.

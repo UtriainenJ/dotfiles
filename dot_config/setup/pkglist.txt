@@ -49,4 +49,4 @@ wireplumber
 pipewire-pulse
 pavucontrol
 zoxide
-7z
+7zip
