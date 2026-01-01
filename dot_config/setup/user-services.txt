@@ -1,5 +1,4 @@
 app-com.mitchellh.ghostty.service
-arch-update-tray.service
 hypridle.service
 hyprpolkitagent.service
 waybar.service

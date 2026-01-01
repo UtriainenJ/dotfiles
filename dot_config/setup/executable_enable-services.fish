@@ -15,14 +15,4 @@ else
     echo "user-services.txt not found"
 end
 
-# Enable system-level services
-if test -f $SYSTEM_SERVICES
-    for svc in (cat $SYSTEM_SERVICES)
-        echo "Enabling system unit: $svc"
-        sudo systemctl enable $svc --now
-    end
-else
-    echo "system-services.txt not found"
-end
-
-echo "All listed services and timers have been enabled."
+echo "done enabling services"
