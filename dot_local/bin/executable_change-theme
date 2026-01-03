@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Check for argument
+if [ -z "$1" ]; then
+    echo "Usage: $0 /path/to/image"
+    exit 1
+fi
+
+IMG="$1"
+
+# Check if the file exists
+if [ ! -f "$IMG" ]; then
+    echo "Error: File '$IMG' does not exist."
+    exit 1
+fi
+
+# Set the wallpaper using 'awww'
+echo "Setting wallpaper to '$IMG'..."
+awww img "$IMG"
+
+# Run wallust
+echo "Generating colors with wallust..."
+wallust run "$IMG"
+
+echo "Done."
+
