@@ -3,7 +3,7 @@ bat
 dunst
 cliphist
 uwsm
-swww
+awww-git
 fcitx5
 fcitx5-configtool
 fcitx5-gtk
@@ -36,6 +36,7 @@ otf-font-awesome
 poppler
 qt5-wayland
 qt5ct
+qt6-wayland
 qt6ct
 resvg
 ripgrep
