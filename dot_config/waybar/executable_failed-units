@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo "=== User units (systemctl --user --failed) ==="
+echo
+systemctl --user --failed || true
+
+echo
+echo "=== System units (systemctl --failed) ==="
+echo
+systemctl --failed || true
+
+echo
+read -n 1 -s -p "Press any key to close..."
