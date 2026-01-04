@@ -19,7 +19,7 @@ Includes configs and setup for a Hyprland experience.
 
 - **Fixes and improvements**:
   - Wayland hints to resolve compatibility issues.
-  - Fcitx5 systemd service to fix dead keys and input issues in apps without full input method frameworks (e.g., Ghostty).
+  - Fcitx5 systemd service to fix dead keys and input issues in apps without full input method frameworks (e.g., [Ghostty](https://github.com/ghostty-org/ghostty/discussions/8899)).
 
 - **Utilities**:
   - **Fuzzel** for running apps and clipboard management with images.
