@@ -52,3 +52,5 @@ vscode = { template = 'vscode', target = '~/.cache/wal/colors' }
 yazi-flavor = { template = 'yazi-flavor.toml', target = '~/.config/yazi/flavors/wallust.yazi/flavor.toml' }
 yazi-tmtheme = { template = 'yazi-tmtheme.xml', target = '~/.config/yazi/flavors/wallust.yazi/tmtheme.xml'}
 hyprland = { template = 'colors-hypr.conf', target = '~/.config/hypr/themes/wallust.conf' }
+fuzzel = { template = 'fuzzel.ini', target = '~/.config/fuzzel/wallust-theme.ini' }
+dunst = { template = 'dunstrc', target = '~/.config/dunst/dunstrc' }
