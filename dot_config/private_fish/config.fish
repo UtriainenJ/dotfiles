@@ -4,8 +4,9 @@ if status is-interactive
     #found in .bash_profile, adjusted for fish
     dbus-update-activation-environment --systemd --all
     # Aliases
-    alias ls='ls --color=auto'
+    alias ls='ls -v --color=auto'
     alias grep='grep --color=auto'
+    alias less='less -RSmi'
     alias bye='systemctl poweroff'
     alias shut='systemctl poweroff'
     alias yeet='sudo pacman -Rns'
@@ -18,7 +19,7 @@ end
 #############################
 # PATH additions (prepend -p)
 #############################
-fish_add_path -p $HOME/.local/bin
+fish_add_path -p $HOME/.local/bin $HOME/.cargo/bin
 
 # ASDF configuration code
 if test -z $ASDF_DATA_DIR
