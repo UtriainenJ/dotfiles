@@ -11,7 +11,7 @@ PanelWindow {
 
     anchors: attachedTo.anchors
 
-    margins.bottom: attachedTo.margins.bottom - Config.borderThickness
+    margins.top: attachedTo.margins.top - Config.borderThickness
     margins.left: attachedTo.margins.left - Config.borderThickness
     implicitWidth: attachedTo.implicitWidth + Config.borderThickness * 2
     implicitHeight: attachedTo.implicitHeight + Config.borderThickness * 2

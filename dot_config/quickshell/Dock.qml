@@ -10,10 +10,10 @@ Scope {
         id: dockWindow
         color: "transparent"
 
-        anchors.bottom: true
+        anchors.top: true
         anchors.left: true
 
-        margins.bottom: 60
+        margins.top: 60
         margins.left: 60
 
         implicitWidth: mWrapper.implicitWidth
@@ -25,11 +25,10 @@ Scope {
 
             Clock {}
         }
-        
     }
 
     PanelBorder {
         id: dockBorder
         attachedTo: dockWindow
-    }
+    }    
 }
