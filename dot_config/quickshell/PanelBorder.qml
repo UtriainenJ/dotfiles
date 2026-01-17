@@ -4,15 +4,23 @@ import Quickshell.Wayland
 
 PanelWindow {
 
+    required property var attachedTo
+
+    color: "transparent"
+    WlrLayershell.namespace: "Qs-panel-border"
+
+    anchors: attachedTo.anchors
+
+    margins.bottom: attachedTo.margins.bottom - Config.borderThickness
+    margins.left: attachedTo.margins.left - Config.borderThickness
+    implicitWidth: attachedTo.implicitWidth + Config.borderThickness * 2
+    implicitHeight: attachedTo.implicitHeight + Config.borderThickness * 2
+
+    Rectangle {
+        anchors.fill: parent
         color: "transparent"
-        WlrLayershell.namespace: "Qs-panel-border"
-
-        Rectangle {
-            anchors.fill: parent
-            color: "transparent"
-            radius: Config.panelBorderRadius
-            border.color: Config.borderColor
-            border.width: Config.borderThickness
-        }
-
+        radius: Config.panelBorderRadius
+        border.color: Config.borderColor
+        border.width: Config.borderThickness
     }
+}
