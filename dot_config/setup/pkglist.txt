@@ -20,6 +20,7 @@ chezmoi
 git
 greetd
 greetd-regreet
+grim
 hyprland
 hypridle
 hyprlock
@@ -40,6 +41,7 @@ qt6-wayland
 qt6ct
 resvg
 ripgrep
+slurp
 waybar
 yazi
 xdg-desktop-portal-hyprland
