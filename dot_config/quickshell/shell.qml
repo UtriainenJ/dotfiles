@@ -1,3 +1,6 @@
-import QtQuick
+import Quickshell
 
-Dock {}
+Scope {
+    Dock {}
+}
+

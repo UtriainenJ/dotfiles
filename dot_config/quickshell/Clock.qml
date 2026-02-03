@@ -15,6 +15,7 @@ GridLayout {
 
         Layout.alignment: Qt.AlignRight | Qt.AlignBottom
         Layout.horizontalStretchFactor: 1
+        //Layout.fillWidth: true
     }
 
     Text {
@@ -28,6 +29,7 @@ GridLayout {
 
         Layout.alignment: Qt.AlignLeft | Qt.AlignBottom
         Layout.horizontalStretchFactor: 1
+        //Layout.fillWidth: true
     }
 
     Text {

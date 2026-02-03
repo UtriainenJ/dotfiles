@@ -13,22 +13,30 @@ Scope {
         anchors.top: true
         anchors.left: true
 
-        margins.top: 60
-        margins.left: 60
+        margins.top: Config.dockPos.y
+        margins.left: Config.dockPos.x
 
         implicitWidth: mWrapper.implicitWidth
         implicitHeight: mWrapper.implicitHeight
 
         WrapperMouseArea { 
             id: mWrapper
-            margin: Config.borderThickness * 2
+            margin: 50
 
             Clock {}
         }
+
+        
     }
 
     PanelBorder {
         id: dockBorder
         attachedTo: dockWindow
-    }    
+    }
+
+    AttachedTray {
+        id: tray
+        attachedTo: dockWindow
+    }
+
 }
