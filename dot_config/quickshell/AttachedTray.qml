@@ -21,7 +21,6 @@ PanelWindow {
     ColumnLayout {
     id: trayIconsLayout
     // spacing: 6 // spacing between tray icons
-
         Repeater {
             model: SystemTray.items
             delegate: IconImage {
@@ -30,7 +29,7 @@ PanelWindow {
                 implicitSize: 24
 
                 MouseArea {
-                    id: mArea
+                    id: iconMouseArea
                     anchors.fill: parent
 
                     acceptedButtons: Qt.LeftButton | Qt.RightButton
@@ -49,9 +48,41 @@ PanelWindow {
                     }
 
                     hoverEnabled: true
-                    onEntered: { hoveredItem = modelData }
-                    onExited: { if (hoveredItem === modelData) hoveredItem = null }
+                    onEntered: { hoveredItem = modelData; menuCloseTimer.stop(); }
+                    onExited: { menuCloseTimer.start(); }
                 }
+            }
+        }
+
+    }
+
+    // hoverhandlers instead of mouseareas to avoid stealing mouse events from the menu entries
+    HoverHandler {
+        id: menuHoverHandler
+        target: menuLayout
+
+        onHoveredChanged: {
+            if (hovered) {
+                menuCloseTimer.stop();
+            }
+            else {
+                menuCloseTimer.start();
+            }
+        }
+    }
+    HoverHandler {
+        id: trayHoverHandler
+        target: trayIconsLayout
+    }
+
+    Timer {
+        id: menuCloseTimer
+        interval: 500
+        repeat: false
+        onTriggered: {
+            if (!menuHoverHandler.hovered &&
+                !trayHoverHandler.hovered) {
+                hoveredItem = null;
             }
         }
     }
@@ -71,8 +102,6 @@ PanelWindow {
 
             // content blocks & separators
             delegate: Item {
-                id: menuEntryItem
-                
                 implicitWidth: childrenRect.width
                 implicitHeight: childrenRect.height
                 Loader {
