@@ -1,8 +1,7 @@
 import QtQuick
 import QtQuick.Layouts
 import Quickshell
-import Quickshell.Widgets
-import "../../visuals"
+import qs.visuals
 
 ColumnLayout {
     id: menuLayout

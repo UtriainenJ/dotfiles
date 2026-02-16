@@ -1,10 +1,9 @@
 import Quickshell
-import "modules/dock"
-import "modules/tray"
-import "modules/shared"
+import qs.modules.dock
+import qs.modules.tray
+import qs.modules.shared
 
-
-Scope {
+ShellRoot {
     Dock {}
 
     Tray { id: tray }

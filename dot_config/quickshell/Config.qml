@@ -2,7 +2,7 @@ pragma Singleton
 
 import Quickshell
 import QtQuick
-import "visuals"
+import qs.visuals
 
 Singleton {
 

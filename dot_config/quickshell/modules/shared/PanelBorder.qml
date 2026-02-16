@@ -1,7 +1,7 @@
 import QtQuick
 import Quickshell
 import Quickshell.Wayland
-import "../../"
+import qs
 
 PanelWindow {
     // should be attached to a panel window as a sibling

@@ -2,9 +2,7 @@ import Quickshell
 import Quickshell.Widgets
 import QtQuick
 import QtQuick.Controls
-import QtQuick.Effects
-import QtQuick.Layouts
-import "../../visuals"
+import qs.visuals
 
 
 Item {

@@ -1,8 +1,8 @@
 import QtQuick
 import QtQuick.Layouts
-import "../shared"
-import "../../visuals"
-import "../../"
+import qs.modules.shared
+import qs.visuals
+import qs
 
 GridLayout {
     columns: 2

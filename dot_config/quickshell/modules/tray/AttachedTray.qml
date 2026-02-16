@@ -1,6 +1,5 @@
 import Quickshell
 
-
 Scope {
     required property PanelWindow attachedTo
 

@@ -1,7 +1,7 @@
 import Quickshell
 import Quickshell.Widgets
-import "../shared"
-import "../../" // root for Config.qml
+import qs.modules.shared
+import qs
 
 Scope {
     id: root
