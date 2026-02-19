@@ -3,6 +3,7 @@ import Quickshell.Widgets
 import QtQuick
 import QtQuick.Controls
 import qs.visuals
+import qs.visuals.effects
 
 
 Item {
@@ -13,6 +14,11 @@ Item {
 
     implicitWidth: contentLoader.implicitWidth
     implicitHeight: contentLoader.implicitHeight
+
+    ElevationShadow {
+        attachedTo: backgroundRect
+        visible: entryMouseArea.containsMouse
+    }
 
     Rectangle{
         id: backgroundRect
@@ -53,8 +59,6 @@ Item {
                     implicitSize: 20
                     asynchronous: true
                 }
-
-                
             }
 
             Loader {
@@ -116,7 +120,11 @@ Item {
         }
 
         hoverEnabled: true
-        onEntered: backgroundRect.color = Colors.hoverTone(Colors.clrPrimaryContainer)
-        onExited: backgroundRect.color = Colors.clrPrimaryContainer
+        onEntered: {
+            backgroundRect.color = Colors.hoverTone(Colors.clrPrimaryContainer)
+        }
+        onExited: { 
+            backgroundRect.color = Colors.clrPrimaryContainer
+        }
     }
 }

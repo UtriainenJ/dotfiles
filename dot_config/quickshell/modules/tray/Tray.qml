@@ -97,7 +97,7 @@ PanelWindow {
         id: menuStackView
         anchors.left: trayIconsLayout.right
 
-        implicitWidth: currentItem === null ? 0 : currentItem.implicitWidth + 4
+        implicitWidth: currentItem === null ? 0 : currentItem.implicitWidth + 14
         implicitHeight: currentItem === null ? 0 : currentItem.implicitHeight
 
         pushEnter: NoAnim {}
